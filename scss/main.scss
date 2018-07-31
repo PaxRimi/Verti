@@ -302,9 +302,6 @@ $desktop-width: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .footer__text:first-of-type {
-      display: none;
-    }
     hr {
       width: 100%;
     }
@@ -323,7 +320,19 @@ $desktop-width: 1024px;
       }
     }
     .footer__icon {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 10px 0;
+      h4{
+        font-size: 20px;
+      }
+      .footer__icon-box{
+        i {
+          font-size: 40px;
+          padding-right: 10px;
+        }
+      }
     }
     @include tablet {
       flex-direction: row;
@@ -340,20 +349,9 @@ $desktop-width: 1024px;
         margin-bottom: 20px;
       }
       .footer__icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 50%;
         height: 200.2px;
         padding-bottom: 20px;
-        h4{
-          font-size: 20px;
-        }
-        .footer__icon-box{
-          i {
-            font-size: 40px;
-          }
-        }
       }
     }
     @include desktop {
